@@ -175,16 +175,6 @@ const FACULTY = [
   research:"Circular Material Sourcing in Interior Renovation (see Research library)",
   website:"Material Bank", course:"Introduction to Parametric Design with Grasshopper", software:"Rhino, once fundamentals are solid",
   advice:"Draw before you model. Ideas survive being wrong on paper; they're expensive to undo once you're deep in a 3D file."},
- {initials:"RN", name:"Dr. Rawan Naseef", area:"Building Technology",
-  book:{title:"Building Construction Illustrated", why:"Every studio decision eventually has to meet a real assembly — this book makes that concrete early."},
-  research:"Thermal Mass and Comfort in Renovated Masonry Buildings (see Research library)",
-  website:"AIA", course:"Revit for Interiors: Documentation Fast-Track", software:"Revit",
-  advice:"Learn to detail one thing well before you try to detail everything. A single resolved junction teaches you more than ten vague ones."},
- {initials:"LT", name:"Dr. L. Tanaka — PLACEHOLDER", area:"Design Theory & History",
-  book:{title:"A Pattern Language", why:"It gives students permission to think in reusable design logic instead of chasing novelty for its own sake."},
-  research:"Spatial Behavior in Open-Plan Learning Environments (see Research library)",
-  website:"JSTOR", course:"Portfolio Design Workshop", software:"InDesign",
-  advice:"Your concept statement should survive being read by someone outside the program. If it only makes sense to architecture students, it isn't finished."},
 ];
 
 function renderHome(){

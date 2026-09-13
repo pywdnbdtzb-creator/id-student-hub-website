@@ -175,6 +175,21 @@ const FACULTY = [
   research:"Circular Material Sourcing in Interior Renovation (see Research library)",
   website:"Material Bank", course:"Introduction to Parametric Design with Grasshopper", software:"Rhino, once fundamentals are solid",
   advice:"Draw before you model. Ideas survive being wrong on paper; they're expensive to undo once you're deep in a 3D file."},
+    {initials:"BF", name:"Ms. Bashayer Alfehaed", area:"Interior Architecture",
+  book:{title:"Architecture: Form, Space & Order", why:"It's the clearest bridge between design theory and how students actually reason about spatial decisions."},
+  research:"Circular Material Sourcing in Interior Renovation (see Research library)",
+  website:"Material Bank", course:"Introduction to Parametric Design with Grasshopper", software:"Rhino, once fundamentals are solid",
+  advice:"Draw before you model. Ideas survive being wrong on paper; they're expensive to undo once you're deep in a 3D file."},
+    {initials:"BF", name:"Ms. Bashayer Alfehaed", area:"Interior Architecture",
+  book:{title:"Architecture: Form, Space & Order", why:"It's the clearest bridge between design theory and how students actually reason about spatial decisions."},
+  research:"Circular Material Sourcing in Interior Renovation (see Research library)",
+  website:"Material Bank", course:"Introduction to Parametric Design with Grasshopper", software:"Rhino, once fundamentals are solid",
+  advice:"Draw before you model. Ideas survive being wrong on paper; they're expensive to undo once you're deep in a 3D file."},
+    {initials:"BF", name:"Ms. Bashayer Alfehaed", area:"Interior Architecture",
+  book:{title:"Architecture: Form, Space & Order", why:"It's the clearest bridge between design theory and how students actually reason about spatial decisions."},
+  research:"Circular Material Sourcing in Interior Renovation (see Research library)",
+  website:"Material Bank", course:"Introduction to Parametric Design with Grasshopper", software:"Rhino, once fundamentals are solid",
+  advice:"Draw before you model. Ideas survive being wrong on paper; they're expensive to undo once you're deep in a 3D file."},
 ];
 
 function renderHome(){

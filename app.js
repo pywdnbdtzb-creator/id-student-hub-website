@@ -170,12 +170,12 @@ function oppRowHTML(o){
 }
 
 const FACULTY = [
- {initials:"AR", name:"Ms. Bashayer Alfehaed", area:"Interior Architecture",
+ {initials:"BF", name:"Ms. Bashayer Alfehaed", area:"Interior Architecture",
   book:{title:"Architecture: Form, Space & Order", why:"It's the clearest bridge between design theory and how students actually reason about spatial decisions."},
   research:"Circular Material Sourcing in Interior Renovation (see Research library)",
   website:"Material Bank", course:"Introduction to Parametric Design with Grasshopper", software:"Rhino, once fundamentals are solid",
   advice:"Draw before you model. Ideas survive being wrong on paper; they're expensive to undo once you're deep in a 3D file."},
- {initials:"MK", name:"Dr. Rawan Naseef", area:"Building Technology",
+ {initials:"RN", name:"Dr. Rawan Naseef", area:"Building Technology",
   book:{title:"Building Construction Illustrated", why:"Every studio decision eventually has to meet a real assembly — this book makes that concrete early."},
   research:"Thermal Mass and Comfort in Renovated Masonry Buildings (see Research library)",
   website:"AIA", course:"Revit for Interiors: Documentation Fast-Track", software:"Revit",

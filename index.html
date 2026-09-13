@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ID Student Hub — Interior Design &amp; Architecture</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <button class="brand" data-nav="home" aria-label="Go to homepage">
+      <span class="brand-mark">ID Student Hub</span>
+      <span class="brand-sub">Interior Design &amp; Architecture</span>
+    </button>
+    <nav class="main-nav" aria-label="Primary">
+      <button class="nav-link" data-nav="home">Home</button>
+      <button class="nav-link" data-nav="resources">Resources</button>
+      <button class="nav-link" data-nav="guide">Student Guide</button>
+      <button class="nav-link" data-nav="work">Student Work</button>
+      <button class="nav-link" data-nav="faculty">Faculty Picks</button>
+      <button class="nav-link" data-nav="research">Research</button>
+      <button class="nav-link" data-nav="opportunities">Opportunities</button>
+      <button class="nav-link" data-nav="faq">FAQ</button>
+    </nav>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="wrap">
+      <button class="nav-link" data-nav="home">Home</button>
+      <button class="nav-link" data-nav="resources">Resources</button>
+      <button class="nav-link" data-nav="guide">Student Guide</button>
+      <button class="nav-link" data-nav="work">Student Work</button>
+      <button class="nav-link" data-nav="faculty">Faculty Picks</button>
+      <button class="nav-link" data-nav="research">Research</button>
+      <button class="nav-link" data-nav="opportunities">Opportunities</button>
+      <button class="nav-link" data-nav="faq">FAQ</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================ HOME ============================================================ -->
+<section class="page active" id="page-home">
+
+  <div class="hero wrap">
+    <span class="label">ID Student Hub — by the Interior Design Club</span>
+    <h1>Interior Design &amp; Architecture</h1>
+    <p class="hero-sub">A student resource hub for learning, exploring, and growing.</p>
+    <p class="hero-body">Everything you'd otherwise have to piece together from scattered PDFs, group chats, and half-remembered advice — books that are actually worth reading, software worth learning first, faculty recommendations, past student work, live opportunities, and answers to the questions every new studio raises. Built by students, with guidance from faculty, for the students who come next.</p>
+    <div class="hero-actions">
+      <button class="btn" data-nav="resources">Browse resources</button>
+      <button class="btn ghost" data-nav="guide">Read the student guide</button>
+    </div>
+    <div class="hero-plan">
+      <div><strong>6</strong>resource categories</div>
+      <div><strong>4</strong>year-by-year guides</div>
+      <div><strong>1</strong>faculty picks archive</div>
+      <div><strong>∞</strong>growing, student-maintained</div>
+    </div>
+  </div>
+
+  <div class="section wrap">
+    <div class="section-head">
+      <h2>Featured resources</h2>
+      <button class="see-all" data-nav="resources">View all resources →</button>
+    </div>
+    <div class="grid-3" id="home-resources-grid"></div>
+  </div>
+
+  <div class="section wrap">
+    <div class="section-head">
+      <h2>From the student archive</h2>
+      <button class="see-all" data-nav="work">View student work →</button>
+    </div>
+    <div class="grid-3" id="home-work-grid"></div>
+  </div>
+
+  <div class="section wrap">
+    <div class="section-head">
+      <h2>Faculty picks</h2>
+      <button class="see-all" data-nav="faculty">See all faculty →</button>
+    </div>
+    <p class="section-intro">Recommendations from the people who teach us — the books, references and advice faculty members return to most.</p>
+    <div class="grid-3" id="home-faculty-grid"></div>
+  </div>
+
+  <div class="section wrap">
+    <div class="section-head">
+      <h2>Latest opportunities</h2>
+      <button class="see-all" data-nav="opportunities">View all opportunities →</button>
+    </div>
+    <div id="home-opportunities-list"></div>
+  </div>
+
+  <div class="cta-band">
+    <div class="wrap cta-inner">
+      <div>
+        <h2 style="font-size:clamp(24px,3vw,34px);max-width:16ch;">Know something other students should?</h2>
+        <p>Recommend a book, tool, website, competition, or course. Every submission is reviewed by the club before it's published.</p>
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
+        <button class="btn" data-open-modal="submit-resource">Recommend a resource</button>
+        <button class="btn ghost" data-open-modal="submit-faculty">I'm faculty — submit a pick</button>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ============================================================ RESOURCES ============================================================ -->
+<section class="page" id="page-resources">
+  <div class="page-hero wrap">
+    <span class="label">02 — Resources</span>
+    <h1>Resources</h1>
+    <p>Books, software, websites, courses, opportunities and templates — organized so you can find what's actually useful instead of scrolling forums at 1am.</p>
+  </div>
+
+  <div class="section wrap" style="padding-top:44px;">
+    <div class="subnav" id="resources-subnav">
+      <button class="active" data-sub="books">Books &amp; References</button>
+      <button data-sub="software">Software &amp; Tools</button>
+      <button data-sub="websites">Websites &amp; Platforms</button>
+      <button data-sub="courses">Courses &amp; Workshops</button>
+      <button data-sub="competitions">Competitions &amp; Opportunities</button>
+      <button data-sub="templates">Templates &amp; Materials</button>
+    </div>
+
+    <!-- BOOKS -->
+    <div class="res-panel" id="res-books">
+      <div class="filter-row">
+        <div class="search-wrap"><input class="search-input" id="books-search" placeholder="Search books — try “lighting” or “materials”"></div>
+        <div class="filter-bar" id="books-cat-filter"></div>
+        <div class="filter-bar" id="books-year-filter"></div>
+      </div>
+      <div class="grid-3" id="books-grid"></div>
+    </div>
+
+    <!-- SOFTWARE -->
+    <div class="res-panel" id="res-software" style="display:none;">
+      <div class="filter-row">
+        <div class="search-wrap"><input class="search-input" id="software-search" placeholder="Search software — try “Revit” or “rendering”"></div>
+        <div class="filter-bar" id="software-cat-filter"></div>
+      </div>
+      <div class="grid-3" id="software-grid"></div>
+    </div>
+
+    <!-- WEBSITES -->
+    <div class="res-panel" id="res-websites" style="display:none;">
+      <div class="filter-row">
+        <div class="search-wrap"><input class="search-input" id="websites-search" placeholder="Search websites &amp; platforms"></div>
+        <div class="filter-bar" id="websites-cat-filter"></div>
+      </div>
+      <div class="grid-3" id="websites-grid"></div>
+    </div>
+
+    <!-- COURSES -->
+    <div class="res-panel" id="res-courses" style="display:none;">
+      <p class="section-intro">Courses and workshops students have found genuinely useful, on top of studio. <span class="placeholder-flag">PLACEHOLDER — TO BE REPLACED</span> entries are examples pending review.</p>
+      <div class="grid-3" id="courses-grid"></div>
+    </div>
+
+    <!-- COMPETITIONS RESOURCES -->
+    <div class="res-panel" id="res-competitions" style="display:none;">
+      <p class="section-intro">Where to find design competitions and open calls. For live deadlines, see the <a href="#" data-nav="opportunities" style="color:var(--blueprint);">Opportunities</a> section.</p>
+      <div class="grid-3" id="competitions-grid"></div>
+    </div>
+
+    <!-- TEMPLATES -->
+    <div class="res-panel" id="res-templates" style="display:none;">
+      <p class="section-intro">Sheet layouts, portfolio grids and checklists maintained by the club. <span class="placeholder-flag">PLACEHOLDER — TO BE REPLACED</span> until final files are uploaded.</p>
+      <div class="grid-3" id="templates-grid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ STUDENT GUIDE ============================================================ -->
+<section class="page" id="page-guide">
+  <div class="page-hero wrap">
+    <span class="label">03 — Student Guide</span>
+    <h1>Student Guide</h1>
+    <p>Guidance for every stage of your academic journey — what to focus on, what to learn, and what past students wish they'd known sooner.</p>
+  </div>
+  <div class="section wrap" style="padding-top:44px;">
+    <div class="subnav" id="guide-subnav">
+      <button class="active" data-sub="new">New Students</button>
+      <button data-sub="y1">1st Year</button>
+      <button data-sub="y2">2nd Year</button>
+      <button data-sub="y3">3rd Year</button>
+      <button data-sub="y4">4th Year</button>
+    </div>
+    <div id="guide-content"></div>
+  </div>
+</section>
+
+<!-- ============================================================ STUDENT WORK ============================================================ -->
+<section class="page" id="page-work">
+  <div class="page-hero wrap">
+    <span class="label">04 — Student Work</span>
+    <h1>Student Work</h1>
+    <p>An archive of studio projects, research, competitions and creative work from students across every year. <span class="placeholder-flag">PLACEHOLDER — TO BE REPLACED</span> projects shown below are examples of how submitted work will appear — published only with student permission.</p>
+  </div>
+  <div class="section wrap" style="padding-top:44px;">
+    <div class="filter-bar" id="work-cat-filter" style="margin-bottom:34px;"></div>
+    <div class="grid-3" id="work-grid"></div>
+  </div>
+</section>
+
+<!-- ============================================================ FACULTY PICKS ============================================================ -->
+<section class="page" id="page-faculty">
+  <div class="page-hero wrap">
+    <span class="label">05 — Faculty Picks</span>
+    <h1>Faculty Picks</h1>
+    <p>Recommendations from the people who teach us. Faculty profiles are published only after the faculty member has reviewed and approved their entry.</p>
+  </div>
+  <div class="section wrap" style="padding-top:44px;">
+    <div class="grid-3" id="faculty-grid"></div>
+  </div>
+  <div class="section wrap" style="padding-top:0;">
+    <div class="section-head"><h2>Are you a faculty member?</h2></div>
+    <p class="section-intro">Submit your recommendations below. We'll follow up to confirm details before anything is published under your name.</p>
+    <button class="btn" data-open-modal="submit-faculty">Submit a faculty recommendation</button>
+  </div>
+</section>
+
+<!-- ============================================================ RESEARCH ============================================================ -->
+<section class="page" id="page-research">
+  <div class="page-hero wrap">
+    <span class="label">06 — Research</span>
+    <h1>Research Library</h1>
+    <p>A growing collection of research relevant to interior design and architecture students — theses, papers, and studies worth reading. <span class="placeholder-flag">PLACEHOLDER — TO BE REPLACED</span> entries illustrate the format ahead of real submissions.</p>
+  </div>
+  <div class="section wrap" style="padding-top:44px;">
+    <div class="filter-row">
+      <div class="search-wrap"><input class="search-input" id="research-search" placeholder="Search research — try “materials” or “lighting”"></div>
+      <div class="filter-bar" id="research-cat-filter"></div>
+    </div>
+    <div id="research-list"></div>
+  </div>
+</section>
+
+<!-- ============================================================ OPPORTUNITIES ============================================================ -->
+<section class="page" id="page-opportunities">
+  <div class="page-hero wrap">
+    <span class="label">07 — Opportunities</span>
+    <h1>Opportunities</h1>
+    <p>Competitions, workshops, internships and more, with deadlines kept front and center. <span class="placeholder-flag">PLACEHOLDER — TO BE REPLACED</span> listings are examples — real postings will replace them as the club confirms details.</p>
+  </div>
+  <div class="section wrap" style="padding-top:44px;">
+    <div class="filter-bar" id="opp-type-filter" style="margin-bottom:30px;"></div>
+    <div id="opportunities-list"></div>
+  </div>
+</section>
+
+<!-- ============================================================ FAQ ============================================================ -->
+<section class="page" id="page-faq">
+  <div class="page-hero wrap">
+    <span class="label">08 — FAQ</span>
+    <h1>Frequently Asked Questions</h1>
+    <p>Answers to the questions that come up in every studio, every year.</p>
+  </div>
+  <div class="section wrap" style="padding-top:44px;">
+    <div class="filter-row">
+      <div class="search-wrap"><input class="search-input" id="faq-search" placeholder="Search the FAQ"></div>
+      <div class="filter-bar" id="faq-cat-filter"></div>
+    </div>
+    <div id="faq-list" style="max-width:760px;"></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================ FOOTER ============================================================ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h5 style="font-family:var(--serif);font-size:19px;">ID Student Hub</h5>
+        <p style="font-size:13.5px;color:var(--ink-soft);max-width:32ch;margin-top:10px;">A resource platform built by the Interior Design Club to support Interior Design &amp; Architecture students — maintained by students, guided by faculty.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#" data-nav="resources">Resources</a></li>
+          <li><a href="#" data-nav="guide">Student Guide</a></li>
+          <li><a href="#" data-nav="work">Student Work</a></li>
+          <li><a href="#" data-nav="research">Research</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Community</h5>
+        <ul>
+          <li><a href="#" data-nav="faculty">Faculty Picks</a></li>
+          <li><a href="#" data-nav="opportunities">Opportunities</a></li>
+          <li><a href="#" data-open-modal="submit-resource">Recommend a resource</a></li>
+          <li><a href="#" data-open-modal="submit-faculty">Faculty submission</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Support</h5>
+        <ul>
+          <li><a href="#" data-nav="faq">FAQ</a></li>
+          <li><a href="#" data-nav="home">About the club</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>ID Student Hub — Interior Design Club</span>
+      <span>Content reviewed before publication · Not an official university platform</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================ MODAL ============================================================ -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modalContent"></div>
+</div>
+
+<script src="assets/content.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

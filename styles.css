@@ -336,3 +336,10 @@ footer{border-top:1px solid var(--line);padding:52px 0 32px;margin-top:0;}
 .cta-inner{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;}
 
 .year-jump{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px;}
+@media (max-width: 700px) {
+  .wrap {
+    width: auto;
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+}

@@ -498,10 +498,31 @@ function submitFacultyFormHTML(){
 document.addEventListener('submit', (e)=>{
   if(e.target.id === 'resourceForm'){
     e.preventDefault();
-    document.getElementById('resource-success').classList.add('show');
-    e.target.reset();
-    e.target.style.display='none';
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch('https://formspree.io/f/xaeygjrd', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        document.getElementById('resource-success').classList.add('show');
+        form.reset();
+        form.style.display = 'none';
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    })
+    .catch(() => {
+      alert('Something went wrong. Please check your connection and try again.');
+    });
   }
+});
  if(e.target.id === 'facultyForm'){
   e.preventDefault();
 

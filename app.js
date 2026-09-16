@@ -498,6 +498,12 @@ function submitFacultyFormHTML(){
 document.addEventListener('submit', (e)=>{
   if(e.target.id === 'resourceForm'){
     e.preventDefault();
+    document.getElementById('resource-success').classList.add('show');
+    e.target.reset();
+    e.target.style.display='none';
+  }
+});
+    e.preventDefault();
 
     const form = e.target;
     const formData = new FormData(form);

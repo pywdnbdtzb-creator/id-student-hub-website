@@ -202,7 +202,6 @@ const WORK = [
   {
     title: "Horizon Flow",
     student: "Juri Alrasheed · Limar Alasmari · Ghadeer Shehab · Dareen Saif",
-    year: "3rd Year",
     course: "Competition Entry",
     semester: "—",
     category: "Competitions",

@@ -143,10 +143,13 @@ function facultyCardHTML(f, idx){
 }
 function workCardHTML(w, idx){
   return `<div class="gallery-item" data-work="${idx}">
-    <div class="card" style="padding:0;">
-      <div class="swatch"><span>${w.category}</span></div>
+    <div class="card" style="padding:0; overflow:hidden;">
+      <img src="${w.image}" alt="${w.title}" style="width:100%; height:220px; object-fit:cover; display:block;">
       <div class="gallery-caption" style="padding-top:18px;">
-        <div class="tag-row"><span class="tag blueprint">${w.category}</span><span class="tag">${w.year}</span></div>
+        <div class="tag-row">
+          <span class="tag blueprint">${w.category}</span>
+          <span class="tag">${w.year}</span>
+        </div>
         <h3 style="margin-top:8px;">${w.title}</h3>
         <p class="meta">${w.student} · ${w.course}</p>
       </div>

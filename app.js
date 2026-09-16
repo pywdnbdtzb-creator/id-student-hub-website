@@ -335,18 +335,35 @@ function attachGalleryHandlers(){
   document.querySelectorAll('[data-work]').forEach(item=>{
     item.addEventListener('click', ()=>{
       const w = WORK[parseInt(item.dataset.work)];
+
       openModal(`
-        <span class="placeholder-flag">PLACEHOLDER — TO BE REPLACED</span>
+        <img 
+          src="${w.image}" 
+          alt="${w.title}" 
+          style="width:100%; max-height:420px; object-fit:cover; display:block; border-radius:4px; margin-bottom:22px;"
+        >
+
         <h3 style="margin-top:12px;">${w.title}</h3>
-        <p class="meta">${w.student} · ${w.year} · ${w.course} · ${w.semester}</p>
-        <div class="swatch" style="margin-top:16px;"><span>${w.category}</span></div>
-        <div class="modal-section"><h5>Concept</h5><p>${w.concept}</p></div>
-        <div class="modal-section"><h5>Description</h5><p>${w.desc}</p></div>
+
+        <p class="meta">${w.student} · ${w.year} · ${w.course}</p>
+
+        <div class="swatch" style="margin-top:16px;">
+          <span>${w.category}</span>
+        </div>
+
+        <div class="modal-section">
+          <h5>Concept</h5>
+          <p>${w.concept}</p>
+        </div>
+
+        <div class="modal-section">
+          <h5>Description</h5>
+          <p>${w.desc}</p>
+        </div>
       `);
     });
   });
 }
-
 /* ============================================================ FACULTY ============================================================ */
 function renderFaculty(){
   document.getElementById('faculty-grid').innerHTML = FACULTY.map((f,i)=>facultyCardHTML(f,i)).join('');

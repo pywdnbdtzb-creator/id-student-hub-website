@@ -199,21 +199,17 @@ const GUIDE = {
 };
 
 const WORK = [
- {title:"Threshold: A Study in Compressed Space", student:"S. Martins — PLACEHOLDER", year:"4th Year", course:"Graduation Studio", semester:"Fall", category:"Graduation Projects",
-  concept:"An exploration of how compression and release of space shape a visitor's sense of arrival.",
-  desc:"A graduation project examining spatial sequencing through a series of compressed and released volumes in a cultural pavilion."},
- {title:"Adaptive Reuse: Warehouse to Studio Housing", student:"J. Okafor — PLACEHOLDER", year:"3rd Year", course:"Adaptive Reuse Studio", semester:"Spring", category:"Studio Projects",
-  concept:"Converting an industrial shell into live-work units while preserving structural character.",
-  desc:"A studio project reimagining an existing warehouse structure as flexible live-work housing for creative professionals."},
- {title:"Light as Material: A Lighting Research Study", student:"A. Chen — PLACEHOLDER", year:"3rd Year", course:"Independent Research", semester:"Fall", category:"Research",
-  concept:"Treating daylight and artificial light as a primary design material rather than an afterthought.",
-  desc:"A short research study cataloguing how three precedent interiors use light to shape perceived material qualities."},
- {title:"Between Lines: Bee Breeders Entry", student:"Team Meridian — PLACEHOLDER", year:"2nd–3rd Year (team)", course:"Competition Entry", semester:"Summer", category:"Competitions",
-  concept:"A pavilion concept responding to a 2024 open international brief.", desc:"A student team's submission to an open international pavilion competition, developed outside of coursework."},
- {title:"Grain: Material Studies in Timber", student:"R. Haddad — PLACEHOLDER", year:"2nd Year", course:"Materials Studio", semester:"Spring", category:"Studio Projects",
-  concept:"A material-first design process starting from timber grain and joinery logic.", desc:"An interiors project developed by starting from material behavior rather than form."},
- {title:"Fieldnotes: Sketches from a Site Visit", student:"M. Iyer — PLACEHOLDER", year:"1st Year", course:"Foundations Studio", semester:"Fall", category:"Illustrations",
-  concept:"On-site observational sketching as a design research method.", desc:"A collection of on-site sketches used to inform an early foundations studio brief."},
+  {
+    title: "Horizon Flow",
+    student: "Juri Alrasheed · Limar Alasmari · Ghadeer Shehab · Dareen Saif",
+    year: "3rd Year",
+    course: "Competition Entry",
+    semester: "—",
+    category: "Competitions",
+    image: "student-work/horizon-flow.jpg",
+    concept: "Inspired by ZEECO’s vapor recovery systems, the sculpture explores continuous flow and rotational movement, combined with the symbolism of flame as a representation of energy and transformation. The form also draws from Al-Ahsa’s traditional Al-Baydhana ornament, translating its rhythm and repetition into intertwined curved bands that balance industrial character with cultural identity.",
+    desc: "A proposal developed for the “Art That Embodies the Unseen” competition, exploring how industrial processes, energy, movement, and cultural identity can be expressed through an urban sculptural form."
+  }
 ];
 
 const RESEARCH = [

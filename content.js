@@ -206,7 +206,7 @@ const WORK = [
     course: "Competition Entry",
     semester: "—",
     category: "Competitions",
-    image: "student-work/horizon-flow.jpg",
+    image: "WhatsApp Image 2026-09-16 at 3.31.32 PM.jpeg",
     concept: "Inspired by ZEECO’s vapor recovery systems, the sculpture explores continuous flow and rotational movement, combined with the symbolism of flame as a representation of energy and transformation. The form also draws from Al-Ahsa’s traditional Al-Baydhana ornament, translating its rhythm and repetition into intertwined curved bands that balance industrial character with cultural identity.",
     desc: "A proposal developed for the “Art That Embodies the Unseen” competition, exploring how industrial processes, energy, movement, and cultural identity can be expressed through an urban sculptural form."
   }

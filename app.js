@@ -347,10 +347,6 @@ function attachGalleryHandlers(){
 
         <p class="meta">${w.student} · ${w.year} · ${w.course}</p>
 
-        <div class="swatch" style="margin-top:16px;">
-          <span>${w.category}</span>
-        </div>
-
         <div class="modal-section">
           <h5>Concept</h5>
           <p>${w.concept}</p>

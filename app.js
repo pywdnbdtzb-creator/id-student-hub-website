@@ -143,13 +143,6 @@ function renderBlocks(){
       ? filtered.map(blockCardHTML).join('')
       : `<div class="no-results">No blocks found.</div>`;
 }
-  );
-
-  document.getElementById('blocks-grid').innerHTML =
-    filtered.length
-      ? filtered.map(blockCardHTML).join('')
-      : `<div class="empty-state">No blocks found.</div>`;
-}
 function courseCardHTML(c){
   return `<div class="card">
     <div class="tag-row"><span class="tag blueprint">${c.category}</span><span class="tag">${c.year}</span><span class="placeholder-flag">${c.note}</span></div>

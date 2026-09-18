@@ -14,6 +14,7 @@ let state = {
   booksCat:"All", booksYear:"All Years", booksSearch:"",
   softwareCat:"All", softwareSearch:"",
   websitesCat:"All", websitesSearch:"",
+  blocksCat:"All", blocksSearch:"",
   workCat:"All",
   researchCat:"All", researchSearch:"",
   oppType:"All",
@@ -105,6 +106,42 @@ function websiteCardHTML(w){
     <p class="meta">Who it's for: ${w.who}</p>
     <div class="card-foot"><a class="card-link" href="${w.link}" target="_blank" rel="noopener">Visit site ↗</a></div>
   </div>`;
+}
+function blockCardHTML(b){
+  return `<div class="card">
+    <div class="tag-row"><span class="tag blueprint">${b.category}</span></div>
+    <h3>${b.name}</h3>
+    <p class="desc"><strong style="font-weight:600;">What: </strong>${b.what}</p>
+    <p class="why">${b.why}</p>
+    <p class="meta">Who it's for: ${b.who}</p>
+    ${b.student ? `<p class="meta">Contributed by: ${b.student}</p>` : ''}
+    <div class="card-foot"><a class="card-link" href="${b.link}" target="_blank" rel="noopener">Visit site ↗️</a></div>
+  </div>`;
+}
+
+function renderBlocks(){
+  const search = state.blocksSearch || "";
+  const cat = state.blocksCat || "All";
+
+  const filtered = BLOCKS.filter(b =>
+    (cat === "All" || b.category === cat) &&
+    matchesSearch(b, search)
+  );
+
+  renderFilterBar(
+    'blocks-cat-filter',
+    ['All', ...uniqueCats(BLOCKS, 'category')],
+    cat,
+    value => {
+      state.blocksCat = value;
+      renderBlocks();
+    }
+  );
+
+  document.getElementById('blocks-grid').innerHTML =
+    filtered.length
+      ? filtered.map(blockCardHTML).join('')
+      : `<div class="empty-state">No blocks found.</div>`;
 }
 function courseCardHTML(c){
   return `<div class="card">
@@ -256,6 +293,7 @@ function renderWebsites(){
   grid.innerHTML = list.length ? list.map(websiteCardHTML).join('') : '<div class="no-results">No websites match those filters yet.</div>';
 }
 document.getElementById('websites-search').addEventListener('input', (e)=>{ state.websitesSearch=e.target.value; renderWebsites(); });
+document.getElementById('blocks-search').addEventListener('input', (e)=>{ state.blocksSearch=e.target.value; renderBlocks(); });
 
 function renderCourses(){ document.getElementById('courses-grid').innerHTML = COURSES.map(courseCardHTML).join(''); }
 function renderCompetitionsRes(){ document.getElementById('competitions-grid').innerHTML = COMPETITIONS_RES.map(competitionResCardHTML).join(''); }

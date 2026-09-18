@@ -553,7 +553,7 @@ if(e.target.id === 'resourceForm'){
 /* ============================================================ INIT ============================================================ */
 function renderAll(){
   renderHome();
-  renderBooks(); renderSoftware(); renderWebsites(); renderCourses(); renderCompetitionsRes(); renderTemplates();
+  renderBooks(); renderSoftware(); renderWebsites(); renderCourses(); renderCompetitionsRes(); renderTemplates(); renderBlocks();
   renderGuide('new');
   renderWork();
   renderFaculty();

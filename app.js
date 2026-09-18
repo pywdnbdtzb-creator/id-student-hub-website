@@ -125,17 +125,24 @@ function renderBlocks(){
 
   const filtered = BLOCKS.filter(b =>
     (cat === "All" || b.category === cat) &&
-    matchesSearch(b, search)
+    matchesSearch(b.name + b.category + b.what + b.why + b.who, search)
   );
 
   renderFilterBar(
     'blocks-cat-filter',
-    ['All', ...uniqueCats(BLOCKS, 'category')],
+    uniqueCats(BLOCKS, 'category'),
     cat,
     value => {
       state.blocksCat = value;
       renderBlocks();
     }
+  );
+
+  document.getElementById('blocks-grid').innerHTML =
+    filtered.length
+      ? filtered.map(blockCardHTML).join('')
+      : `<div class="no-results">No blocks found.</div>`;
+}
   );
 
   document.getElementById('blocks-grid').innerHTML =
